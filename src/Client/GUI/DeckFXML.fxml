@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GUI.DeckFXMLController">
+   <children>
+      <ImageView fitHeight="767.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Deck%20Selection%20Sreen.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="85.0" layoutY="637.0" mnemonicParsing="false" onAction="#btnBack_OnClick" opacity="0.0" prefHeight="50.0" prefWidth="384.0" text="Back" />
+      <Button fx:id="btnPlay" layoutX="677.0" layoutY="437.0" mnemonicParsing="false" onAction="#btnPlay_OnClick" opacity="0.0" prefHeight="289.0" prefWidth="306.0" text="Duel" />
+   </children>
+</AnchorPane>

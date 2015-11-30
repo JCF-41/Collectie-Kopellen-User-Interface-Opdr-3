@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768" prefWidth="1024" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GUI.MainScreenFXMLController">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1024.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Welcome%20screen.png" />
+         </image>
+      </ImageView>
+      <GridPane alignment="CENTER" layoutX="30.0" layoutY="35.0" prefHeight="695.0" prefWidth="959.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="203.0" minHeight="0.0" prefHeight="155.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="392.0" minHeight="10.0" prefHeight="114.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="390.0" minHeight="10.0" prefHeight="129.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="304.0" minHeight="10.0" prefHeight="293.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnDuel" alignment="BASELINE_CENTER" contentDisplay="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#btnDuel_OnClick" opacity="0.0" prefHeight="294.0" prefWidth="306.0" text="Duel" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <Button fx:id="btnNewDeck" alignment="BASELINE_CENTER" contentDisplay="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#btnNewDeck_OnClick" opacity="0.0" prefHeight="104.0" prefWidth="802.0" text="Nieuw Deck" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Button fx:id="btnAccount" alignment="BASELINE_CENTER" contentDisplay="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#btnAccount_OnClick" opacity="0.0" prefHeight="104.0" prefWidth="802.0" text="Account" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+            <Button fx:id="btnLogOut" alignment="BASELINE_CENTER" contentDisplay="CENTER" minWidth="100.0" mnemonicParsing="false" onAction="#btnLogOut_OnClick" opacity="0.0" prefHeight="119.0" prefWidth="581.0" text="LogOut" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="BOTTOM" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

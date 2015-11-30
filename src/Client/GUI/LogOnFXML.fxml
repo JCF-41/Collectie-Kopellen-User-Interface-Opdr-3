@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="apLogOn" maxHeight="451.0" maxWidth="362.0" minHeight="451.0" minWidth="362.0" pickOnBounds="false" prefHeight="451.0" prefWidth="362.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Client.GUI.LogOnFXMLController">
+    <children>
+      <ImageView fitHeight="451.0" fitWidth="362.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Login%20screen%20MightyDuels.png" />
+         </image>
+      </ImageView>
+        <GridPane layoutX="22.0" layoutY="105.0" prefHeight="268.0" prefWidth="317.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="200.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="65.0" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TextField fx:id="tfUserName" prefHeight="41.0" prefWidth="317.0" promptText="User name">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
+                <PasswordField fx:id="tfPassWord" prefHeight="41.0" prefWidth="317.0" promptText="Password" GridPane.rowIndex="1">
+               <font>
+                  <Font size="18.0" />
+               </font></PasswordField>
+                <Button fx:id="btnLogOn" alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnLogOn_OnClick" opacity="0.0" prefHeight="43.0" prefWidth="317.0" GridPane.rowIndex="2" />
+                <Button fx:id="btnRegister" alignment="BASELINE_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnRegister_OnClick" opacity="0.0" prefHeight="40.0" prefWidth="319.0" text="Register" GridPane.rowIndex="3" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
