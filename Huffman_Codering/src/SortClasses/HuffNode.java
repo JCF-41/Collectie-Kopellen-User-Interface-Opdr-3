@@ -57,7 +57,7 @@ public class HuffNode implements Comparable {
 
     @Override
     public String toString() {
-        return this.name.toString();
+        return "Node:" + this.name + "\nValue:" + this.value + "\nSource:" + this.location + "\n------------";
     }
 
     public Boolean hasLeftChild() {
@@ -80,6 +80,9 @@ public class HuffNode implements Comparable {
 
     public HuffNode getRightChild() {
         return this.rightChild;
+    }
+    public void setLocation(String location){
+        this.location  = location;
     }
 
     public void printTree(String location) {

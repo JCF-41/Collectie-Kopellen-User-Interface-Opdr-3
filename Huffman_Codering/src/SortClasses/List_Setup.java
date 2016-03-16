@@ -29,7 +29,8 @@ public class List_Setup {
         karakterCount = createkarakterCount();
         Queue = createHuffNodeList();
         Queue = createHuffNodeTree();
-        Queue.poll().printTree("");
+//        Queue.peek().printTree("");
+        fillLocations("", Queue.peek());
     }
 
     public Map<Character, Integer> createkarakterCount() {
@@ -69,5 +70,18 @@ public class List_Setup {
             Queue.add(newHuffNode);
         }     
         return Queue;
-    }  
+    }
+     public void fillLocations(String location, HuffNode node) {
+        if (node.hasLeftChild()) {
+            HuffNode leftChild = node.getLeftChild();
+            leftChild.setLocation(location + "0"); 
+            fillLocations(location + "0", leftChild);
+        }
+        if (node.hasRightChild()) {
+            HuffNode rightChild =  node.getRightChild();
+            rightChild.setLocation(location + "1");
+            fillLocations(location + "1", rightChild);
+        } 
+          System.out.println(node.toString());
+    }
 }
