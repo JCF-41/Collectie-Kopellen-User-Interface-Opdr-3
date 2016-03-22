@@ -17,7 +17,7 @@ public class Champion {
     private String releaseDate;
     private int difficulty;
     private String category;
-    private List<Stat> stats;
+    private List<Ability> abilities;
     
     public Champion(String name, String releaseDate, int difficulty, String category) {
         this.name = name;
@@ -26,12 +26,12 @@ public class Champion {
         this.category = category;
     }
     
-    public Champion(String name, String releaseDate, int difficulty, String category, List<Stat> stats) {
+    public Champion(String name, String releaseDate, int difficulty, String category, List<Ability> abilities) {
         this.name = name;
         this.releaseDate = releaseDate;
         this.difficulty = difficulty;
         this.category = category;
-        this.stats = stats;
+        this.abilities = abilities;
     }
     
     //Auto generated getters/setters
@@ -67,12 +67,12 @@ public class Champion {
         this.category = category;
     }
 
-    public List<Stat> getStats() {
-        return stats;
+    public List<Ability> getAbilities() {
+        return abilities;
     }
 
-    public void setStats(List<Stat> stats) {
-        this.stats = stats;
+    public void setStats(List<Ability> abilities) {
+        this.abilities = abilities;
     }
 
 }

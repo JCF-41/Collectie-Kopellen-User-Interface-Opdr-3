@@ -24,7 +24,10 @@ public class ChampionListFXMLController implements Initializable {
     
     
     private List<Champion> champions;
+    //Om GUI en list hetzelfde te houden
     private ObservableList<Champion> observableChampions;
+    
+    private List<Ability> abilities;
     
     /**
      * Initializes the controller class.
@@ -32,11 +35,13 @@ public class ChampionListFXMLController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         generateChampions();
+        generateAbilities();
     }
     
     public void generateChampions() {
         champions = new ArrayList<>();
         
+        //Lectografic
         champions.add(new Champion("Aatrox","13-06-2013",4, "Fighter"));
         champions.add(new Champion("Ahri","14-12-2011",5, "Mage"));
         champions.add(new Champion("Akali","11-05-2010", 7, "Assassin"));
@@ -58,7 +63,6 @@ public class ChampionListFXMLController implements Initializable {
         champions.add(new Champion("Diana","07-08-2012",4, "Fighter"));
         champions.add(new Champion("Dr. Mundo","02-09-2011",5, "Fighter"));
         champions.add(new Champion("Draven","06-06-2012",8, "Marksman"));
-        //TODO
         champions.add(new Champion("Ekko","28-05-2015",8, "Assassin"));
         champions.add(new Champion("Elise","26-10-2012",9, "Mage"));
         champions.add(new Champion("Evelynn","01-05-2009",10, "Assassin"));
@@ -166,8 +170,128 @@ public class ChampionListFXMLController implements Initializable {
         champions.add(new Champion("Zed","13-11-2012",7, "Assassin"));
         champions.add(new Champion("Ziggs","01-02-2012",4, "Mage"));
         champions.add(new Champion("Zilean","18-04-2009",6, "Support"));
-        champions.add(new Champion("Zyra","24-07-2012",7, "Mage"));
-//        
+        champions.add(new Champion("Zyra","24-07-2012",7, "Mage"));   
+    }
+    
+    public void generateAbilities() {
+        //Aatrox
+        abilities.add(new Ability("P","Blood Well"));
+        abilities.add(new Ability("Q","Dark Flight"));
+        abilities.add(new Ability("W","Blood Thrist / Blood Price"));
+        abilities.add(new Ability("E","Blades of Torment"));
+        abilities.add(new Ability("R","Massacre"));
+        
+        //Ahri
+        abilities.add(new Ability("P","Essense Theft"));
+        abilities.add(new Ability("Q","Orb of Deception"));
+        abilities.add(new Ability("W","Fox-Fire"));
+        abilities.add(new Ability("E","Charm"));
+        abilities.add(new Ability("R","Spirit Rush"));
+        
+        //Akali
+        abilities.add(new Ability("P","Twin Disiplines"));
+        abilities.add(new Ability("Q","Mark of the Assassin"));
+        abilities.add(new Ability("W","Twilight Shroud"));
+        abilities.add(new Ability("E","Crescent Slash"));
+        abilities.add(new Ability("R","Shadow Dance"));
+        
+        //Alistar
+        abilities.add(new Ability("P","Trample"));
+        abilities.add(new Ability("Q","Pulverize"));
+        abilities.add(new Ability("W","Headbutt"));
+        abilities.add(new Ability("E","Triumphant Roar"));
+        abilities.add(new Ability("R","Unbreakable Will"));
+        
+        //Amumu
+        abilities.add(new Ability("P","Cursed Touch"));
+        abilities.add(new Ability("Q","Bandadge Toss"));
+        abilities.add(new Ability("W","Despair"));
+        abilities.add(new Ability("E","Tantrum"));
+        abilities.add(new Ability("R","Curse of the Sad Mummy"));
+        
+        //Anivia
+        abilities.add(new Ability("P","Rebirth"));
+        abilities.add(new Ability("Q","Flash Frost"));
+        abilities.add(new Ability("W","Crystallize"));
+        abilities.add(new Ability("E","Frostbite"));
+        abilities.add(new Ability("R","Glacial Storm"));
+        
+        //Annie
+        abilities.add(new Ability("P","Pyromania"));
+        abilities.add(new Ability("Q","Disintegrate"));
+        abilities.add(new Ability("W","Incinerate"));
+        abilities.add(new Ability("E","Molten Shield"));
+        abilities.add(new Ability("R","Summon: Tibbers"));
+        
+        //Ashe
+        abilities.add(new Ability("P","Frost Shot"));
+        abilities.add(new Ability("Q","Ranger's Focus"));
+        abilities.add(new Ability("W","Volley"));
+        abilities.add(new Ability("E","Hawkshot"));
+        abilities.add(new Ability("R","Enchanted Crystal Arrow"));
+        
+        //Azir
+        abilities.add(new Ability("P","Shurima's Legacy"));
+        abilities.add(new Ability("Q","Conquering Sands"));
+        abilities.add(new Ability("W","Arise!"));
+        abilities.add(new Ability("E","Shifting Sands"));
+        abilities.add(new Ability("R","Emperor's Divide"));
+        
+        //Bard
+        abilities.add(new Ability("P","Traveler's Call"));
+        abilities.add(new Ability("Q","Cosmic Binding"));
+        abilities.add(new Ability("W","Caretaker's Shrine"));
+        abilities.add(new Ability("E","Magical Journey"));
+        abilities.add(new Ability("R","Tempered Fate"));
+        
+        //Blitzcrank
+        abilities.add(new Ability("P","Mana Barrier"));
+        abilities.add(new Ability("Q","Rocket Grab"));
+        abilities.add(new Ability("W","Overdrive"));
+        abilities.add(new Ability("E","Power Fist"));
+        abilities.add(new Ability("R","Static Field"));
+        
+        //Brand
+        abilities.add(new Ability("P","Blaze"));
+        abilities.add(new Ability("Q","Sear"));
+        abilities.add(new Ability("W","Pillar of Flame"));
+        abilities.add(new Ability("E","Conflagration"));
+        abilities.add(new Ability("R","Pyroclasm"));
+        
+        //Braum
+        abilities.add(new Ability("P","Concussive Blows"));
+        abilities.add(new Ability("Q","Winter's Bite"));
+        abilities.add(new Ability("W","Stand Behind Me"));
+        abilities.add(new Ability("E","Unbreakable"));
+        abilities.add(new Ability("R","Glacial Fissure"));
+        
+        //Caitlyn
+        abilities.add(new Ability("P","Headshot"));
+        abilities.add(new Ability("Q","Piltover Peacemaker"));
+        abilities.add(new Ability("W","Yordle Snap Trap"));
+        abilities.add(new Ability("E","90 Caliber Net"));
+        abilities.add(new Ability("R","Ace in the Hole"));
+        
+        //Cassiopeia
+        abilities.add(new Ability("P","Aspect of the Serpent"));
+        abilities.add(new Ability("Q","Noxious Blast"));
+        abilities.add(new Ability("W","Miasma"));
+        abilities.add(new Ability("E","Twin Fang"));
+        abilities.add(new Ability("R","Petrifying Gaze"));
+        
+        //Cho'Gath
+        abilities.add(new Ability("P","Carnivore"));
+        abilities.add(new Ability("Q","Rupture"));
+        abilities.add(new Ability("W","Feral Scream"));
+        abilities.add(new Ability("E","Vorpal Spikes"));
+        abilities.add(new Ability("R","Feast"));
+        
+        //Corki
+        abilities.add(new Ability("P","Hextech Munitions"));
+        abilities.add(new Ability("Q","Phosphorus Bomb"));
+        abilities.add(new Ability("W","Valkyrie / Special Delivery"));
+        abilities.add(new Ability("E","Gatling Gun"));
+        abilities.add(new Ability("R","Missle Barrage"));
     }
     
 }
