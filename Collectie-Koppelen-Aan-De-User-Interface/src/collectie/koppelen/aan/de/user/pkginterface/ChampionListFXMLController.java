@@ -15,6 +15,7 @@ import java.util.TreeSet;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 
@@ -29,6 +30,9 @@ public class ChampionListFXMLController implements Initializable {
     
     @FXML
     private TreeView tvChampions;
+    
+    @FXML
+    private TableView tvInformation;
     
     private List<Champion> champions;
     //Om GUI en list hetzelfde te houden
