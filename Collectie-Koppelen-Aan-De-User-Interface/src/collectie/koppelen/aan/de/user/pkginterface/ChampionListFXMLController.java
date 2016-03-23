@@ -7,10 +7,16 @@ package collectie.koppelen.aan.de.user.pkginterface;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
+import java.util.TreeSet;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TreeItem;
+import javafx.scene.control.TreeView;
 
 /**
  * FXML Controller class
@@ -21,7 +27,8 @@ public class ChampionListFXMLController implements Initializable {
 
     
     
-    
+    @FXML
+    private TreeView tvChampions;
     
     private List<Champion> champions;
     //Om GUI en list hetzelfde te houden
@@ -36,6 +43,34 @@ public class ChampionListFXMLController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         generateChampions();
         generateAbilities();
+        
+        TreeItem<String> rootItem = new TreeItem<String> ("Roles");
+        rootItem.setExpanded(true);
+        
+        Set<String> roles = new TreeSet<>();
+        for (Champion champ : champions) {
+            roles.add(champ.getCategory());
+        }
+        System.out.println(roles);
+        //Add Roles
+        Iterator<String> it = roles.iterator();
+        while(it.hasNext()) {
+            TreeItem<String> item = new TreeItem<String> (it.next());
+            rootItem.getChildren().add(item);
+        }
+        
+        //Add champs to those roles
+        
+        for(Champion champ : champions) {
+            TreeItem<String> item = new TreeItem<String> (champ.getName());   
+            for(TreeItem<String> role : rootItem.getChildren()) {
+                if(role.getValue().contains(champ.getCategory())) {
+                    role.getChildren().add(item);
+                }
+            }
+            
+        }
+        tvChampions.setRoot(rootItem);
     }
     
     public void generateChampions() {
@@ -174,6 +209,7 @@ public class ChampionListFXMLController implements Initializable {
     }
     
     public void generateAbilities() {
+        abilities = new ArrayList<>();
         //Aatrox
         abilities.add(new Ability("P","Blood Well"));
         abilities.add(new Ability("Q","Dark Flight"));
@@ -292,6 +328,7 @@ public class ChampionListFXMLController implements Initializable {
         abilities.add(new Ability("W","Valkyrie / Special Delivery"));
         abilities.add(new Ability("E","Gatling Gun"));
         abilities.add(new Ability("R","Missle Barrage"));
+        
     }
     
 }
